@@ -11,7 +11,7 @@ import ru.poly.infsecdemo.service.StudentService;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "infsec-api/v1/student")
+@RequestMapping(path = "api/student")
 public class StudentController {
 
     private final StudentService studentService;
