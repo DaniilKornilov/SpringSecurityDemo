@@ -55,7 +55,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .antMatchers("/api/test/**")
                 .permitAll()
-                .antMatchers("/infsec-api/v1/**")
+                .antMatchers("/api/student/**")
                 .hasRole(RoleEnum.ROLE_ADMIN.getRoleName())
                 .anyRequest()
                 .authenticated();
