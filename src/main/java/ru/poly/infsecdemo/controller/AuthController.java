@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.poly.infsecdemo.entity.User;
-import ru.poly.infsecdemo.pojo.JwtResponse;
-import ru.poly.infsecdemo.pojo.SignInRequest;
 import ru.poly.infsecdemo.pojo.SignUpRequest;
 import ru.poly.infsecdemo.service.AuthService;
 
@@ -19,12 +17,6 @@ public class AuthController {
     @Autowired
     public AuthController(AuthService authService) {
         this.authService = authService;
-    }
-
-    @PostMapping("/signIn")
-    public ResponseEntity<?> authUser(@RequestBody SignInRequest signInRequest) {
-        JwtResponse jwtResponse = authService.authUser(signInRequest);
-        return ResponseEntity.ok(jwtResponse);
     }
 
     @PostMapping("/signUp")
